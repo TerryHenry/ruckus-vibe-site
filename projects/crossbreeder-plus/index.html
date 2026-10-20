@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crossbreeder Plus · The RUCKUS Vibe</title>
+<meta name="description" content="Bulk firmware changes, inventory and CLI work across standalone Ruckus access points — many at a time instead of one after another.">
+<meta property="og:title" content="Crossbreeder Plus · The RUCKUS Vibe">
+<meta property="og:description" content="Bulk firmware changes, inventory and CLI work across standalone Ruckus access points — many at a time instead of one after another.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ruckusappstore.com/projects/crossbreeder-plus/">
+<link rel="canonical" href="https://ruckusappstore.com/projects/crossbreeder-plus/">
+<meta property="og:image" content="https://ruckusappstore.com/img/crossbreeder-plus.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="hero"><a href="../../index.html"><img src="../../img/banner.jpg" alt="The RUCKUS Vibe" width="1200" height="400"></a></header>
+<main class="wrap">
+<a class="back" href="../../index.html">&larr; All projects</a>
+<article class="project">
+<a class="shot" href="https://github.com/andreacoppini/crossbreeder" rel="noopener"><img src="../../img/crossbreeder-plus.jpg" alt="The Crossbreeder Plus console"></a>
+<div class="inner">
+<h1>Crossbreeder Plus</h1>
+<p class="by">By Andrea Coppini</p>
+<p>Bulk firmware changes, inventory and CLI work across standalone Ruckus access points — <strong>many at a time</strong> instead of one after another. No controller, no installer, no runtime: one binary that talks to each AP directly over SSH. Measured against a live 558-AP estate: a full inventory sweep finishes in <strong>6.5 seconds</strong>. The original Crossbreeder, working one AP at a time, takes over an hour on a list that size.</p>
+<h3>Key features</h3>
+<ul class="feat"><li><strong>Pings first.</strong> Most addresses on a site list are dead, and each one costs a single unanswered packet instead of an SSH handshake against a timeout. Addresses that never answer are listed, folded into ranges, and can be written out to re-run later.</li><li><strong>Works the APs in parallel</strong> — inventory, firmware, factory reset, reboot, or any sequence of AP CLI commands, across ZoneFlex and Unleashed, at whatever concurrency the site can take. A firmware change cannot be combined with a reboot or a factory reset: fw update only starts the download, so restarting the AP would throw the image away.</li><li><strong>Hosts the firmware itself.</strong> A push needs nothing installed beyond this binary: it serves the images, works out which of your addresses the APs can actually reach, and shows what each one is downloading. Put %M in the filename — %M_118.2.0.0.875.rcks — and it becomes each AP's model, so one run pushes the right file to a mixed estate.</li><li><strong>Follows the reboot.</strong> After the first pass it keeps pinging and re-reading the version, so an AP that drops off reads as rebooting and one that returns on a new version is reported as upgraded — the push is confirmed rather than assumed.</li><li><strong>Reads the country code.</strong> Each AP's configured country code is collected alongside the model and firmware, and the console flags one the board reports as <strong>locked</strong> (Fixed Ctry Code) — the setting an unlock sequence exists to clear. Both are in the CSV and JSON too.</li><li><strong>Exports CSV and JSON</strong>, with a row for every address including the silent ones.</li></ul>
+<div class="buttons"><a class="btn primary" href="https://github.com/andreacoppini/crossbreeder" rel="noopener">View on GitHub</a><a class="btn" href="https://github.com/andreacoppini/crossbreeder/releases/" rel="noopener">Download</a></div>
+<p class="issue">Featured in The RUCKUS Vibe, October 2026.</p>
+</div>
+</article>
+</main>
+<footer>The RUCKUS Vibe: coding projects from RUCKUS engineers, shared by their authors.</footer>
+</body>
+</html>
