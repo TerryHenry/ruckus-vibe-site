@@ -58,5 +58,6 @@
 var q=document.querySelector('.search'),cards=[].slice.call(document.querySelectorAll('.card')),none=document.querySelector('.empty');
 q.addEventListener('input',function(){var t=q.value.trim().toLowerCase(),n=0;cards.forEach(function(c){var on=!t||c.dataset.text.indexOf(t)>-1;c.hidden=!on;if(on)n++;});none.hidden=n>0;});
 </script>
+<script data-goatcounter="https://ruckusappstore.goatcounter.com/count" async src="https://gc.zgo.at/count.v4.js" integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+" crossorigin="anonymous"></script>
 </body>
 </html>
