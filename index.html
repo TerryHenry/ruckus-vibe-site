@@ -4,14 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The RUCKUS Vibe</title>
-<meta name="description" content="Coding projects from RUCKUS team members">
+<meta name="description" content="Coding projects from RUCKUS SEs">
 <meta property="og:title" content="The RUCKUS Vibe">
-<meta property="og:description" content="Coding projects from RUCKUS team members">
+<meta property="og:description" content="Coding projects from RUCKUS SEs">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ruckusappstore.com/">
-<link rel="canonical" href="https://ruckusappstore.com/">
-<meta property="og:image" content="https://ruckusappstore.com/img/banner.jpg">
-<meta name="twitter:card" content="summary_large_image">
+
+
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
@@ -19,13 +17,71 @@
 <body>
 <header class="hero"><a href="index.html"><img src="img/banner.jpg" alt="The RUCKUS Vibe" width="1200" height="400"></a></header>
 <main class="wrap">
-<div class="intro"><p>Coding projects from RUCKUS team members</p><input class="search" type="search" placeholder="Search projects" aria-label="Search projects"></div>
+<div class="intro"><p>Coding projects from RUCKUS SEs</p><input class="search" type="search" placeholder="Search projects" aria-label="Search projects"></div>
 <ul class="grid">
+<li class="card" data-text="r1 mcp   add ruckus one as a claude connector. code-mode mcp server running on cloudflare workers with per-user encrypted credentials. ">
+<a href="projects/r1-mcp/index.html">
+<div class="thumb none">R</div>
+<div class="body"><h2>R1 MCP</h2><p class="blurb">Add RUCKUS One as a Claude connector. Code-mode MCP server running on Cloudflare Workers with per-user encrypted credentials.</p>
+</div></a></li>
+<li class="card" data-text="r1 dash master alek murray  build importable data studio dashboards for ruckus one and ruckus ai from a simple declarative spec via mcp server.
+
+setup &amp; usage in claude deskto here https://youtu.be/-gu7yu6liow
+ pure offline generation — no api credentials needed. output is a .zip you import via data studio → settings → import dashboard. build a dashboard for r1 or smartzone/ai very fast! build an entire custom dashboard faster than you can build a single chart. no learning curve required data studio is apache superset on an apache druid backend. this tool encodes the dataset catalogs and the chart/query grammar so you can build valid dashboards without learning superset internals or guessing field names.">
+<a href="projects/r1-dash-master/index.html">
+<div class="thumb"><img src="img/r1-dash-master.png" alt="" loading="lazy"></div>
+<div class="body"><h2>R1 Dash Master</h2><p class="by">By Alek Murray</p><p class="blurb">Build importable Data Studio dashboards for RUCKUS One and RUCKUS AI from a simple declarative spec via MCP server.</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="ruckus one device mapper mike rieben  desktop app for viewing ruckus one access points and switches on venue floor plans, with rf details (channel, bandwidth, transmit power) and optional poe/lldp information. adds afc power state if 6ghz is enabled. this gives you a holistic view of all devices on a floor plan with rf info at a glance. major feature: move devices from unplanned in a venue onto the map with precision along with adjusting existing device locations. sign in with ruckus one api credentials (region, tenant id, client id, client secret) browse venues and floor plans overlay aps on floor plan images with status and rf labels overlay switches on floor plan images with poe budget shown optional poe/lldp level display search devices globally or per floor entering a hostname, serial number, ip address, or mac address">
+<a href="projects/ruckus-one-device-mapper/index.html">
+<div class="thumb"><img src="img/ruckus-one-device-mapper-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>RUCKUS One Device Mapper</h2><p class="by">By Mike Rieben</p><p class="blurb">Desktop app for viewing RUCKUS One access points and switches on venue floor plans, with RF details (channel, bandwidth, transmit power)…</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="r1 workflow studio terry henry  design ruckus one enrollment workflows visually, or read them out of cloudpath and convert them. a desktop app for macos and windows. build workflows without code. add steps, split visitors by choice or by device, configure dpsk pools, certificates and guest networks, and click through the result as a visitor (try it) before anything exists. nothing happens until you say so. preview shows exactly what would be created; apply needs the workflow's name typed to confirm. it only creates new things (never edits or deletes what's already in ruckus one), creates workflows unpublished, and undo removes what it made. open what you already have in ruckus one as an editable copy. convert cloudpath. enter a cloudpath address and admin sign-in and it reads every workflow (read-only, password never saved), converts them, explains each step that can't convert, and charts what converts and what doesn't. vouchers and sponsor requests become guest networks automatically. export/import workflows - for the very first time, backup your workflows and share with others! private by design. runs only on your computer; api secrets are stored encrypted by the operating system.">
+<a href="projects/r1-workflow-studio/index.html">
+<div class="thumb"><img src="img/r1-workflow-studio-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>R1 Workflow Studio</h2><p class="by">By Terry Henry</p><p class="blurb">Design RUCKUS One enrollment workflows visually, or read them out of Cloudpath and convert them. A desktop app for macOS and Windows.</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="packhound andrea coppini  sniffs out every multicast stream arriving at a network port and tells you what it is, how fast it runs, who is sending it and whether it is healthy: iptv channels, aes67 audio, mdns, ssdp, ptp, igmp and the rest of a network's chatter. a mosaic shows a live still of every tv channel, with its state and whether its audio is arriving. iptv: each programme's name, provider and type; the pids with their content, language and rate; the picture size read from the h.264 stream; continuity errors per pid; the media delivery index (delay factor and loss rate, rfc 4445); rtp losses and reordering. telling real errors from false alarms: a continuity error is only counted as one when packets are actually missing. many encoders advance the counter on packets that carry only a pcr, which the standard forbids but every decoder ignores; those are shown separately as cc quirks (no loss). a datagram that arrives twice (a loop, or two paths) is counted as duplicated rather than as a run of cc errors. if the capturing machine itself drops packets because its buffer overflowed, the header says so, since the errors it causes are not on the network. dante: multicast flows (239.255.x.x, port 4321) named after the device that sends them; the ptpv1 clock leader, with its address, device name, stratum and sync interval; and the devices and their channels from their mdns announcements. dante's audio format is its own, so a native flow shows rate, packets, jitter and whether it stops, but not channel content; a device in aes67 mode shows as aes67, with packet loss. dante sends audio unicast unless a flow is set to multicast, and unicast flows are not visible to a multicast monitor. aes67 and rtp audio: format, packet time and sender, named from sap. mdns: every service announced (airplay, chromecast, printers, sonos, homekit and so on) with its host, address and port, and what is being asked for. ssdp and ws-discovery: devices, their server strings and description urls. ptp: the grandmaster, its clock class, accuracy and priority, and the message rates. igmp and mld: the elected querier and its interval, and who has joined what. vrrp and hsrp: the active router, its priority and the virtual addresses; two vrrp routers advertising the same group is flagged as a split brain. ipv6 neighbour discovery: routers advertising, their prefixes and dns, and the addresses being resolved. anything unrecognised: the first bytes of the payload.">
+<a href="projects/packhound/index.html">
+<div class="thumb"><img src="img/packhound-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>Packhound</h2><p class="by">By Andrea Coppini</p><p class="blurb">Sniffs out every multicast stream arriving at a network port and tells you what it is, how fast it runs, who is sending it and whether it…</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="dwelllink terry henry  resident connectivity management, powered by ruckus one. a desktop app for front desk staff and property managers to create and manage property units, residents, and wi-fi access in ruckus one — without touching the ruckus one admin console directly. add residential units and conference rooms, with optional vlan, description, passphrase and guest wi-fi set up front. bulk import from csv (with a downloadable template) and export to csv. sortable unit list with active, suspended, conference-room and vacant counts, plus search and filters. bulk actions: resend access details, suspend, reactivate, move out, delete. one-step move-out / turnover: revokes owner and guest wi-fi, removes additional residents, and marks the unit vacant. owner, guest and additional-resident passphrases, each with its own vlan and optional expiry date.">
+<a href="projects/dwelllink/index.html">
+<div class="thumb"><img src="img/dwelllink-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>DwellLink</h2><p class="by">By Terry Henry</p><p class="blurb">Resident Connectivity Management, powered by RUCKUS One. A desktop app for front desk staff and property managers to create and manage…</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="fetchpass frederic muffat-es-jacques  guest wi-fi voucher generator for ruckus unleashed, ruckus one and smartzone. fetchpass is a lightweight desktop application that generates guest wi-fi vouchers with a single click, and optionally prints them on a thermal printer. ✅ ruckus unleashed support (firmware 200.19+) ✅ ruckus one support (eu / north america / asia) ✅ smartzone support (vsz-e / vsz-h, firmware 7.0+) 3 configurable voucher buttons (duration in hours, days or weeks) thermal printing on any printer installed in windows (star tsp, epson tm, …) — or simulation mode fully customisable ticket (header, footer, language: en / fr / de / it)">
+<a href="projects/fetchpass/index.html">
+<div class="thumb"><img src="img/fetchpass-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>FetchPass</h2><p class="by">By Frederic Muffat-Es-Jacques</p><p class="blurb">Guest Wi-Fi voucher generator for Ruckus Unleashed, Ruckus One and SmartZone.</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="dashboard gallery john murphy pse network dashboards built from real production telemetry, published with redacted screenshots and scrubbed export bundles you can download. view example dashboards as they will be displayed in ruckus one filter by role or vertical, or ai natural language search for the desired capabilities export for r1 or sz">
+<a href="projects/dashboard-gallery/index.html">
+<div class="thumb"><img src="img/dashboard-gallery-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>Dashboard Gallery</h2><p class="by">By John Murphy · PSE</p><p class="blurb">Network dashboards built from real production telemetry, published with redacted screenshots and scrubbed export bundles you can download.</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="afc planner chris ross service provider 6ghz standard power operations and planning previously unavailable in an easy and/or free format. this will not replace an fcc approved solution for afc. purely for planning purposes. map-based us 6 ghz standard power wi-fi spectrum planning and change detection. query an afc response by lat/lon location against the openafc stack which utilizes the same underlying datasets as fcc approved operators. email login via otp for tracking changes over time per site mcp interface available for polling from your own agentic flows. (currently gated, ask chris for access if needed)">
+<a href="projects/afc-planner/index.html">
+<div class="thumb"><img src="img/afc-planner-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>AFC Planner</h2><p class="by">By Chris Ross · Service Provider</p><p class="blurb">6Ghz standard power operations and planning previously unavailable in an easy and/or free format.</p>
+<span class="tag">November 2026</span></div></a></li>
 <li class="card" data-text="ruckus one api inspector terry henry  a browser extension for observing and visualizing api requests made by the ruckus one web interface. live capture — observe api requests while navigating ruckus one. workflow discovery — group captured calls into time-based windows. visual api flow — visualize the chronological order of observed calls. api relationships — inspect endpoint and field relationships inferred from captured traffic.">
 <a href="projects/ruckus-one-api-inspector/index.html">
 <div class="thumb"><img src="img/ruckus-one-api-inspector.jpg" alt="" loading="lazy"></div>
 <div class="body"><h2>RUCKUS One API Inspector</h2><p class="by">By Terry Henry</p><p class="blurb">A browser extension for observing and visualizing API requests made by the RUCKUS One web interface.</p>
-</div></a></li>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="your imagination is your limitation · wi-co texas kevin franzen  your imagination is your limitation. a practical ai session for wireless engineers, by kevin franzen at wi-co texas 2026. ">
+<a href="projects/your-imagination-is-your-limitation-wi-co-texas/index.html">
+<div class="thumb"><img src="img/your-imagination-is-your-limitation-wi-co-texas-thumb.jpg" alt="" loading="lazy"></div>
+<div class="body"><h2>Your imagination is your limitation · Wi-Co Texas</h2><p class="by">By Kevin Franzen</p><p class="blurb">Your imagination is your limitation. A practical AI session for wireless engineers, by Kevin Franzen at Wi-Co Texas 2026.</p>
+<span class="tag">November 2026</span></div></a></li>
+<li class="card" data-text="update: crossbreeder plus v1.0.11 - with r1 support! andrea coppini   ruckus one integration: automatically imports aps from selected ruckus one venues. automatic ap password retrieval: retrieves each ap's current, ruckus one-managed cli password. expanded inventory: captures configured country codes and identifies aps with locked country codes. multi-command execution: runs multiple cli commands sequentially within one ssh session. improved firmware operations: supports model-based firmware templates and prevents conflicting reboot/reset actions during firmware updates. version notifications: alerts users when a newer crossbreeder release is available. improved factory-default onboarding: better handles forced password changes and default unleashed setup prompts.">
+<a href="projects/update-crossbreeder-plus-v1011-with-r1-support/index.html">
+<div class="thumb none">U</div>
+<div class="body"><h2>UPDATE: Crossbreeder Plus v1.0.11 - With R1 support!</h2><p class="by">By Andrea Coppini</p><p class="blurb"></p>
+<span class="tag">November 2026</span></div></a></li>
 <li class="card" data-text="r1 noc wall terry henry  a server-side noc wall display for ruckus one — for a single site or a whole managed-service business. one small server polls ruckus one; any browser on your network (wall tvs, kiosks, laptops) shows live, customizable dashboards. design screens in a built-in editor, get full-screen alerts and slack / teams / email notifications, receive scheduled reports, and — as an msp — see every customer on one wall. looks and feels like ruckus one — the default screens mirror r1's own dashboard, wi-fi and switch reports; 1,100+ widgets (clients, aps, switches, ports, alarms, dpsk, guests, vlans, wi-fi calling, throughput, rf quality, history…), auto-tiled to any screen, plus a drag-and-drop layout designer. msp mode — connect one msp key (r1's delegated access) and the app discovers every customer, or add a key per customer. customer filter on every widget, fleet-wide statistics, customer health score and rankings, license and trial-expiry tracking, customer-named alerts, and a wall per customer. switch events — flapping ports, port link changes, spanning-tree changes, err-disable events (from the app's own port polling), r1's switch event log, and loop / port-flap / ddos incidents. client experience (experimental) — connection success by stage (association → dhcp), time to connect, incidents, top applications, failures by ssid / ap / client maker, roaming, per venue. alerts that can't be missed — rules take over every display until acknowledged, and notify slack, teams, email or a webhook. built to run unattended — https and certificate management, editor sign-in, credential-free or encrypted configuration backup, in-place upgrade from a downloaded file with a start-up test and one-click rollback.">
 <a href="projects/r1-noc-wall/index.html">
 <div class="thumb"><img src="img/r1-noc-wall-thumb.jpg" alt="" loading="lazy"></div>
@@ -58,6 +114,5 @@
 var q=document.querySelector('.search'),cards=[].slice.call(document.querySelectorAll('.card')),none=document.querySelector('.empty');
 q.addEventListener('input',function(){var t=q.value.trim().toLowerCase(),n=0;cards.forEach(function(c){var on=!t||c.dataset.text.indexOf(t)>-1;c.hidden=!on;if(on)n++;});none.hidden=n>0;});
 </script>
-<script data-goatcounter="https://ruckusappstore.goatcounter.com/count" async src="https://gc.zgo.at/count.v4.js" integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+" crossorigin="anonymous"></script>
 </body>
 </html>
