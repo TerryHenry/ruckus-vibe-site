@@ -6,8 +6,8 @@ a{color:var(--accent-dark)}@media (prefers-color-scheme:dark){a{color:var(--acce
 .hero{background:var(--hero);border-bottom:4px solid var(--accent)}
 .hero img{display:block;width:100%;max-width:1200px;height:auto;margin:0 auto}
 .disclaimer{background:var(--card);border-bottom:1px solid var(--line)}
-.disclaimer p{max-width:1200px;margin:0 auto;padding:18px 20px;text-align:center;color:var(--ink);font-size:24px;line-height:1.35;font-weight:700}
-@media (max-width:600px){.disclaimer p{font-size:19px;padding:14px 16px}}
+.disclaimer p{max-width:1100px;margin:0 auto;padding:26px 20px;text-align:center;color:var(--ink);font-size:clamp(22px,3vw,42px);line-height:1.25;font-weight:800;text-wrap:balance}
+@media (max-width:600px){.disclaimer p{padding:16px}}
 .hero .text{max-width:1200px;margin:0 auto;padding:36px 20px;color:#fff}.hero h1{margin:0;font-size:40px}.hero h1 span{color:var(--accent)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .intro{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;padding:28px 0 18px}
